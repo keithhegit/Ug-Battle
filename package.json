@@ -1,0 +1,22 @@
+{
+  "name": "ug-battle",
+  "version": "0.1.0",
+  "description": "多人在线海战游戏",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": "keithhegit",
+  "license": "MIT"
+}
