@@ -1,5 +1,5 @@
 /**
- * 澳大利亚沿海海战游戏
+ * BattleShip
  * 基于PIXI.js和Socket.IO的多人在线海战游戏
  */
 
@@ -1742,6 +1742,26 @@ function onJoinError(data) {
 
   // 重置等待标志
   joinPending = false
+}
+
+// 在游戏初始化时加载战舰图片
+function loadGameAssets() {
+    return new Promise((resolve) => {
+        // 加载战舰SVG
+        app.loader.add('ship', 'assets/images/ship.svg')
+        app.loader.load(() => {
+            resolve();
+        });
+    });
+}
+
+// 创建战舰精灵
+function createShipSprite() {
+    const ship = new PIXI.Sprite(app.loader.resources.ship.texture);
+    ship.anchor.set(0.5); // 设置锚点为中心
+    ship.width = 50;  // 设置显示大小
+    ship.height = 50;
+    return ship;
 }
 
 // 初始化游戏
