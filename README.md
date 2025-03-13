@@ -379,4 +379,8 @@ const healthValue = document.getElementById('healthValue')
 const speedValue = document.getElementById('speedValue')
 const playerCount = document.getElementById('playerCount')
 const miniMap = document.getElementById('miniMap')
+<<<<<<< HEAD
 ``` 
+=======
+``` 
+>>>>>>> c71be78e079185a6e40486ef197ec3e5b28cc0a1
